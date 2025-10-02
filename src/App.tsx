@@ -1,10 +1,12 @@
 import './App.css'
+import { MainTable } from './components/MainTable'
 
 function App() {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <h1>TanStack Table</h1>
+      <MainTable />
     </>
   )
 }
