@@ -14,11 +14,11 @@
   margin-bottom: 12px;
 }
 
-.btn {
-  padding: 6px 10px;
+button {
+  padding: 8px 20px;
   border: 1px solid #ddd;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   font: inherit;
 }
@@ -34,13 +34,18 @@
 .btn-reset:hover { background: #fff3f3; }
 /*control panel*/
 
+
+/*pagination panel*/
 .paginationPanel{
   display: flex;
   gap: 8px;
   align-items: center;
   margin-bottom: 12px;
 }
+/*pagination panel*/
 
+
+/*table*/
 .tableWrapper{
   border-collapse: collapse;
   width: 100%;
@@ -60,3 +65,4 @@
   padding: 8px;
   text-align: center;
 }
+/*table*/

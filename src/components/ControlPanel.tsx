@@ -1,16 +1,17 @@
-import type { FC } from "react";
+import { useAtom } from 'jotai';                        //returns cortage [value, setValue]
+import { highlightModeAtom } from "../state/highlight";
 
-export const ControlPanel: FC = () => {
-  return (
-    <div
-      className="controlPanel"
-      role="group"
-      aria-label="Подсветка чисел в таблице"
-    >
-      <button type="button" className="btn">prime numbers</button>
-      <button type="button" className="btn">divided by 5</button>
-      <button type="button" className="btn">divided by 7</button>
-      <button type="button" className="btn btn-reset">clear all</button>
-    </div>
-  );
+export function ControlPanel() {
+    const [, setMode] = useAtom(highlightModeAtom);    
+
+    return (
+        <div
+            className="controlPanel"
+        >
+            <button onClick={() => setMode("prime")}>Prime Numbers</button>
+            <button onClick={() => setMode("div5")}>Divided by 5</button>
+            <button onClick={() => setMode("div7")}>Divided by 7</button>
+            <button onClick={() => setMode(null)}>Clear All</button>
+        </div>
+    );
 };
